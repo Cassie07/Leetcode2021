@@ -6,6 +6,7 @@
 #         self.right = right
 class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
+        # Understanding the list as stack (LIFO)
         self.postorder = postorder
         self.map_inorder = {val:i for i, val in enumerate(inorder)}
 
@@ -15,6 +16,7 @@ class Solution:
         if low > high:
             return None
         
+        # Stack: LIFO
         x = TreeNode(self.postorder.pop())
         mid = self.map_inorder[x.val]
         
