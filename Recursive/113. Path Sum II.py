@@ -15,7 +15,8 @@ class Solution:
         
         # [[a]] + [[b]] = [[a,b]]
         # [[a]] + [] [[a]]
-        ret = self.pathSum(root.left, targetSum - root.val) + self.pathSum(root.right, targetSum - root.val)
+        targetSum -= root.val
+        ret = self.pathSum(root.left, targetSum) + self.pathSum(root.right, targetSum)
             
         
         return [[root.val] + i for i in ret]
