@@ -31,6 +31,7 @@ class Solution:
             else:
                 left = height(node.left)
                 right = height(node.right)
+                # Extremely important! left == -1 or right == -1 means that an imbalanced subtree exists!!! if you not set it here, the nodes which higher than this sub-tree will get a wrong height
                 if left == -1 or right == -1 or abs(left-right) > 1:
                     return -1
                 else:
