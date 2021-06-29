@@ -1,0 +1,7 @@
+1. Tree traversal:
+  Inorder: left --> mid --> right
+  Preorder: mid --> left --> right
+  Postorder: left --> right --> mid
+  
+2. Stack: LIFO (So the order of stack.append() need to be reverse for tree traversal. See iterative methods for 144)
+  
