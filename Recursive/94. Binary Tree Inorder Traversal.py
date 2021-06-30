@@ -48,3 +48,5 @@ class Solution:
             node = stack.pop()
             res.append(node.val)
             root = node.right
+
+            
