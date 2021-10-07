@@ -5,12 +5,31 @@
 
 class Solution:
     def guessNumber(self, n: int) -> int:
+# iteration        
+#         low, high = 1, n
         
-        low, high = 1, n
-        
-        while (low <= high):
-            mid = low + (high - low)//2
+#         while (low <= high):
+#             mid = low + (high - low)//2
                 
+#             flag = guess(mid)
+#             print((mid,flag))
+
+#             if flag == 0:
+#                 print(mid)
+#                 return mid
+
+#             elif flag == -1:
+#                 high = mid - 1
+
+#             else:
+#                 low = mid + 1
+
+# recursion
+        def binary(low, high):
+            
+                
+            mid = low + (high - low)//2
+
             flag = guess(mid)
             print((mid,flag))
 
@@ -19,27 +38,9 @@ class Solution:
                 return mid
 
             elif flag == -1:
-                high = mid - 1
+                return binary(low, mid - 1)
 
             else:
-                low = mid + 1
+                return binary(mid + 1, high)
 
-#         def binary(low, high):
-            
-#             if low <= high:
-#                 mid = low + (high - low)//2
-                
-#                 flag = guess(mid)
-#                 print((mid,flag))
-                
-#                 if flag == 0:
-#                     print(mid)
-#                     return mid
-                
-#                 elif flag == -1:
-#                     binary(low, mid - 1)
-                    
-#                 else:
-#                     binary(mid + 1, high)
-
-#         return binary(1, n)
+        return binary(1, n)
