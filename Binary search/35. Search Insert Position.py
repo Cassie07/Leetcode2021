@@ -5,16 +5,17 @@ class Solution:
         # Recursive
         def binary_search(low, high, arr, target):
             
-            
-            if low > high: return low
+            if low <= high:
 
-            mid = low + (high-low)//2
-            
-            if arr[mid] == target:
-                return mid
-            elif arr[mid] < target:
-                return binary_search(mid + 1, high, arr, target)
+                mid = low + (high-low)//2
+
+                if arr[mid] == target:
+                    return mid
+                elif arr[mid] < target:
+                    return binary_search(mid + 1, high, arr, target)
+                else:
+                    return binary_search(low, mid - 1, arr, target)
             else:
-                return binary_search(low, mid - 1, arr, target)
+                return low
         
         return binary_search(0, len(nums)-1, nums, target)
