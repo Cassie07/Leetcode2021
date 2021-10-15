@@ -1,4 +1,4 @@
-**Notebook***
+**Notebook**
 
 **1. if val<br>**
 if val = if bool(val)<br>
