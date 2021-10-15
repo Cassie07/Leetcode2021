@@ -1,6 +1,6 @@
 Notebook
 
-**1. if val**
+**1. if val<br>**
 if val = if bool(val)<br>
 explain: if val != 0 or val != None , bool(val) = True. So sometimes, if val = None, you can use 【if not val】to replace 【if val is None】, the running time will be fast in leetcode.
 
