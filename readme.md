@@ -21,8 +21,8 @@ min_heap = [(val, key) for key, val in dic.items()]
 heapq.heapify(max_heap)
 
 5. Tree traversal:
-  Inorder: left --> mid --> right
-  Preorder: mid --> left --> right
-  Postorder: left --> right --> mid
+  Inorder: left --> mid --> right;
+  Preorder: mid --> left --> right;
+  Postorder: left --> right --> mid;
   
 6. Stack: LIFO (So the order of stack.append() need to be reverse for tree traversal. See iterative methods for 144)
