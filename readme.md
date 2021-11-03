@@ -26,3 +26,8 @@ heapq.heapify(max_heap)
   Postorder: left --> right --> mid;<br>
   
 **6. Stack**: LIFO (So the order of stack.append() need to be reverse for tree traversal. See iterative methods for 144)
+
+
+**7. Two pointers**: Floyid-cycle detection algorithm/ find mid in the linked list: <br>
+slow = slow.next, fast = fast.next.next<br>
+An animation is shown in 202.happy number
