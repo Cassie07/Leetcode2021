@@ -43,3 +43,5 @@ class Solution:
             tmp.end = new_merge[index + 1][0]
             res.append(tmp)
         return res
+
+    
