@@ -4,7 +4,7 @@ class Solution:
         
         dp =[[0] * (len(nums2) + 1) for i in range(len(nums1) + 1)]
         
-        res_max = 0
+
             
         for i in range(1, len(nums1) + 1):
             for j in range(1, len(nums2) + 1):
