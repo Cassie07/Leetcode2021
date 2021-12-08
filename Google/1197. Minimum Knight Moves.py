@@ -9,8 +9,8 @@ class Solution:
         visited = set((0,0))
         
         while queue:
-            cur_cnt = len(queue)
-            for i in range(cur_cnt):
+            cur_level_cnt = len(queue)
+            for i in range(cur_level_cnt):
                 cur_x, cur_y = queue.popleft()
                 if (cur_x, cur_y) == (x,y):
                     return count
