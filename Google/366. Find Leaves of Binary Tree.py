@@ -1,24 +1,15 @@
 class Solution:
     def findLeaves(self, root: Optional[TreeNode]) -> List[List[int]]:
         
-        self.dic = {}
+        self.dic = collections.defaultdict(list)
         
-        def dfs(root):
-            
+        def helper(root):
             if not root:
                 return 0
-            
-            left = dfs(root.left)
-            right = dfs(root.right)
-            
-            level = max(left,right) + 1
-            if level not in self.dic.keys():
-                self.dic[level] = [root.val]
-            else:
-                self.dic[level].append(root.val)
-            return level
-        
-        dfs(root)
-        
-        res = [i for i in self.dic.values()]
-        return res
+            left = helper(root.left)
+            right = helper(root.right)
+            cur_level = max(left, right) + 1
+            self.dic[cur_level].append(root.val)
+            return cur_level
+        helper(root)
+        return [i for i in self.dic.values()]
